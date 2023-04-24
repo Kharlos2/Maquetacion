@@ -9,18 +9,25 @@ import shanks from "./assets/img/shanks.avif";
 
 const Contenido = () => {
 
-    const info = {
+    const info = [
+        {
+            imagen: luffy,
+            texto: "Luffy 👍"
+        },
+        {
+            imagen: zoro,
+            texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum mollitia ipsum, odio enim possimus voluptatem quasi! Quisquam iusto, explicabo, laboriosam architecto quas quam illo autem earum voluptatibus atque cumque."
 
-        imagenUno: luffy,
-        textoUno: "Luffy 👍",
-        imagenDos: zoro,
-        textoDos: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum mollitia ipsum, odio enim possimus voluptatem quasi! Quisquam iusto, explicabo, laboriosam architecto quas quam illo autem earum voluptatibus atque cumque.",
-        imagenTres: law,
-        textoTres: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum mollitia ipsum, odio enim possimus voluptatem quasi! Quisquam iusto, explicabo, laboriosam architecto quas quam illo autem earum voluptatibus atque cumque.",
-        imagenCuatro: shanks,
-        textoCuatro: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum mollitia ipsum, odio enim possimus voluptatem quasi! Quisquam iusto, explicabo, laboriosam architecto quas quam illo autem earum voluptatibus atque cumque."
- 
-    }
+        }, 
+        {
+            imagen: law,
+            texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum mollitia ipsum, odio enim possimus voluptatem quasi! Quisquam iusto, explicabo, laboriosam architecto quas quam illo autem earum voluptatibus atque cumque."
+        },
+        {
+            imagen: shanks,
+            texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum mollitia ipsum, odio enim possimus voluptatem quasi! Quisquam iusto, explicabo, laboriosam architecto quas quam illo autem earum voluptatibus atque cumque."
+        }
+    ]
 
     return (
         <div className="contenido">
@@ -28,10 +35,11 @@ const Contenido = () => {
                 <Agregar/>
             </section>
             <section className="tarjetas">
-                <Tarjeta info={info.imagenUno} texto={info.textoUno}/>
-                <Tarjeta info={info.imagenDos} texto={info.textoDos}/>
-                <Tarjeta info={info.imagenTres} texto={info.textoTres}/>
-                <Tarjeta info={info.imagenCuatro} texto={info.textoCuatro}/>
+                {
+                    info.map((infosita)=>(
+                        <Tarjeta infosita={infosita} />
+                    ))
+                }
             </section>
         </div>
     );

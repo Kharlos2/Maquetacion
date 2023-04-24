@@ -82,6 +82,7 @@
     height: 80%;
     display: flex;
     justify-content: space-between;
+    
 }
 .contenidoTarjeta{
     width: 22%;
@@ -95,7 +96,7 @@
     border-style: solid;
     border-width: 2px;
 }
-.parrafo{
+.parrafo{  
     width: 80%;
     padding: 10px 2px;
     height: 180px;

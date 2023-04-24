@@ -1,11 +1,11 @@
 
 
-const Tarjeta = (props) => {
+const Tarjeta = ({infosita}) => {
     return (
         <div className="contenidoTarjeta">
-            <img src={props.info} alt="luffy" />
+            <img src={infosita.imagen} alt="luffy" />
             <section className="parrafo">
-                {props.texto}
+                {infosita.texto}
             </section>
         </div>
     );
